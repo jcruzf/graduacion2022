@@ -291,10 +291,10 @@ h1, h2, h3, h4, h5, h6 {
   .section-heading .holder span:after {
     position: absolute;
     top: 49%;
-    width: 50px;
+    width: 30px;
   }
   .section-heading .holder span:before {
-    left: -60px;
+    left: -40px;
   }
 }
 
