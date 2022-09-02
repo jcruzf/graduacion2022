@@ -227,7 +227,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* encabezado de las secciones */
 .section-heading {
-  background: blue;
   float: left;
   width: 100%;
   padding: 50px;
@@ -282,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 768px) {
   .section-heading h2 {
+    background: blue;
     font-size: 50px;
   }
   .section-heading .holder{
