@@ -1,0 +1,802 @@
+html, body {
+  max-width: 100%;
+  /*overflow-x: hidden;*/
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #777777;
+  color: #7f7f7f;
+  background: #000;
+  height: 100%;
+  position: relative;
+}
+
+::selection {
+  color: #818892;
+  background: #000;
+}
+
+a {
+  color: #B5121B;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+  color: #B5121B;
+  outline: none;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-family: "Barlow";
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+
+.btn {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+.video_contain {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+#video_bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    z-index:-500;
+}
+
+
+/* header */
+#qbootstrap-header {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  opacity: 1;
+  top: 0;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-header {
+    display: none;
+    margin-top: 0;
+    background: #000;
+    -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  /* navbar */
+  #qbootstrap-header .navbar-brand {
+    color: #fff !important;
+  }
+  #qbootstrap-header #navbar li a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  #qbootstrap-header #navbar li a:hover {
+    color: #B5121B !important;
+  }
+  #qbootstrap-header #navbar li a span:before {
+    background: transparent !important;
+  }
+  #qbootstrap-header #navbar li.active a {
+    background: transparent;
+    background: none;
+    color: #B5121B !important;
+  }
+  #qbootstrap-header #navbar li.active a span:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+
+
+
+#qbootstrap-header .navbar {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#qbootstrap-header #navbar li a {
+  font-size: 16px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+#qbootstrap-header #navbar li a span {
+  position: relative;
+  display: block;
+  padding-bottom: 2px;
+}
+#qbootstrap-header #navbar li a span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#qbootstrap-header #navbar li a:hover {
+  color: #fff;
+}
+#qbootstrap-header #navbar li a:hover span:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#qbootstrap-header #navbar li.active a {
+  background: transparent;
+  background: none;
+  color: #fff;
+}
+#qbootstrap-header #navbar li.active a span:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#qbootstrap-header .navbar-brand {
+  float: left;
+  display: block;
+  font-size: 34px;
+  padding-left: 0;
+  color: #fff;
+  font-family: "Barlow";
+}
+#qbootstrap-header.navbar-fixed-top {
+  position: fixed !important;
+  background: #fff;
+  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  top: 0;
+}
+#qbootstrap-header.navbar-fixed-top .navbar-brand {
+  color: #B5121B;
+}
+#qbootstrap-header.navbar-fixed-top #navbar li a {
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#qbootstrap-header.navbar-fixed-top #navbar li a:hover {
+  color: #B5121B;
+}
+#qbootstrap-header.navbar-fixed-top #navbar li.active a {
+  background: transparent;
+  background: none;
+  color: #B5121B;
+}
+#qbootstrap-header.navbar-fixed-top #navbar li.active a span:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#qbootstrap-header .navbar-default {
+  border: transparent;
+  background: transparent;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+}
+@media screen and (max-width: 768px) {
+  #qbootstrap-header .navbar-default {
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+
+
+
+/* encabezado de las secciones */
+.section-heading {
+  float: left;
+  width: 100%;
+  clear: both;
+  z-index: 100;
+}
+
+.section-heading h2{
+  font-size: 60px !important;
+  font-weight: 800 !important;
+  line-height: 1.1;
+}
+.section-heading h3{
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  line-height: 1.1;
+}
+.section-heading h5{
+  font-size: 35px !important;
+  font-weight: 200 !important;
+  line-height: 1.1;
+}
+
+.section-heading .datewed {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.section-heading .holder{
+  color: #fff;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 11px;
+}
+.section-heading .holder span{
+  position: relative;
+}
+.section-heading .holder span:before,
+.section-heading .holder span:after {
+  position: absolute;
+  top: 49%;
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  content: '';
+}
+.section-heading .holder span:before {
+  left: -110px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .section-heading h2 {
+    font-size: 50px;
+  }
+  .section-heading .holder{
+  font-size: 20px;
+  letter-spacing: 5px;
+  }
+  .section-heading .holder span:before,
+  .section-heading .holder span:after {
+    position: absolute;
+    top: 49%;
+    width: 30px;
+  }
+  .section-heading .holder span:before {
+    left: -35px;
+  }
+  .section-heading .datewed {
+    font-size: 21px;
+  }
+}
+
+
+
+
+/* padding secciones */
+#qbootstrap-invitacion,
+#qbootstrap-countdown,
+#qbootstrap-generacion,
+#qbootstrap-especialidad,
+#qbootstrap-lugar,
+#qbootstrap-cita,
+#qbootstrap-indicaciones {
+  padding: 10em 0 !important;
+}
+@media screen and (max-width: 480px) {
+  #qbootstrap-invitacion,
+  #qbootstrap-countdown,
+  #qbootstrap-generacion,
+  #qbootstrap-especialidad,
+  #qbootstrap-lugar,
+  #qbootstrap-cita,
+  #qbootstrap-indicaciones {
+    height: 680px;
+  }
+}
+
+
+
+
+/* seccion portada - imagen_bg */
+#qbootstrap-portada {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#qbootstrap-portada {
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+#qbootstrap-portada .overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+}
+#qbootstrap-portada .section-heading img{
+  height: 110px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-portada {
+    height: 680px;
+  }
+  #qbootstrap-portada .section-heading img{
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* seccion invitacion */
+#qbootstrap-invitacion .section-heading h5{
+  margin-top: 40px;
+}
+#qbootstrap-invitacion .section-heading img{
+  height: 130px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-invitacion .section-heading img{
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #qbootstrap-invitacion .section-heading h2{
+    font-size: 45px !important;
+  }
+  #qbootstrap-invitacion .section-heading h3{
+    font-size: 30px !important;
+  }
+  #qbootstrap-invitacion .section-heading h5{
+    font-size: 24px !important;
+  }
+}
+
+
+
+
+/* seccion fecha - imagen_bg */
+#qbootstrap-countdown {
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 100;
+  width: 100%;
+}
+#qbootstrap-countdown .overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+}
+#qbootstrap-countdown .section-heading h2{
+  font-size: 70px;
+}
+#qbootstrap-countdown .section-heading .datewed {
+  padding-top: 35px !important;
+  position: relative;
+}
+
+
+#qbootstrap-countdown .countdown {
+  color: #fff;
+}
+#qbootstrap-countdown .countdown span {
+  font-size: 60px !important;
+  margin: 0 20px;
+  display: inline-block;
+  font-family: "Barlow";
+  font-weight: 700;
+  line-height: 1.7;
+}
+#qbootstrap-countdown .countdown small {
+  display: block;
+  font-size: 16px;
+  margin-top: -20px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-countdown .section-heading h2{
+    font-size: 44px !important;
+  }
+  #qbootstrap-countdown .countdown span {
+    font-size: 40px !important;
+    margin: 0 10px;
+    line-height: 1.7;
+  }
+  #qbootstrap-countdown .countdown small {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -10px;
+    letter-spacing: 1px;
+  }
+}
+
+
+
+
+/* seccion generacion */
+#qbootstrap-generacion .section-heading h2{
+  color: #fff;
+  font-size: 70px;
+  font-weight: 800;
+  padding-bottom: 5px;
+  line-height: 1.1;
+}
+#qbootstrap-generacion .section-heading img {
+  height: 250px;
+  margin-top: 40px !important;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-generacion .section-heading h2{
+    font-size: 50px !important;
+  }
+  #qbootstrap-generacion .section-heading img{
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* seccion especialidad - imagen_bg */
+#qbootstrap-especialidad {
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 100%;
+}
+#qbootstrap-especialidad .overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-especialidad .section-heading h2{
+    font-size: 50px !important;
+  }
+  #qbootstrap-especialidad .section-heading h3{
+    font-size: 30px !important;
+  }
+}
+
+
+
+/* seccion lugar */
+#qbootstrap-lugar {
+  position: relative;
+}
+#qbootstrap-lugar .section-heading h3{
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px !important;
+  padding-bottom: 15px;
+}
+
+#qbootstrap-lugar .section-heading img{
+  height: 220px;
+  margin-top: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-lugar .section-heading img{
+  height: 190px;
+}
+  #qbootstrap-lugar .section-heading h2{
+    font-size: 50px !important;
+  }
+  #qbootstrap-lugar .section-heading h3{
+    font-size: 30px !important;
+  }
+}
+
+
+
+
+/* seccion cita - imagen_bg */
+#qbootstrap-cita {
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 100%;
+}
+#qbootstrap-cita .overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+}
+#qbootstrap-cita .section-heading h2{
+  font-size: 40px !important;
+  font-weight: 600  !important;
+  line-height: 1.1;
+}
+#qbootstrap-cita .section-heading h3{
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin-top:  30px !important;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-cita .section-heading h2{
+    font-size: 32px !important;
+  }
+  #qbootstrap-cita .section-heading h3{
+    font-size: 27px !important;
+  }
+}
+
+
+
+
+/* seccion indicaciones */
+#qbootstrap-indicaciones .section-heading h2{
+  font-size: 50px !important;
+  font-weight: 700 !important;
+
+}
+#qbootstrap-indicaciones .section-heading h3{
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+#qbootstrap-indicaciones .section-heading .matricula{
+  font-size: 50px !important;
+  background:#B5121B;
+  padding: 3px 20px;
+}
+#qbootstrap-indicaciones .section-heading img {
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-indicaciones .section-heading .matricula{
+    display: block;
+    padding: 10px 0;
+  }
+  #qbootstrap-indicaciones .section-heading h2{
+    font-size: 45px !important;
+  }
+  #qbootstrap-indicaciones .section-heading h3{
+    font-size: 22px !important;
+  }
+  #qbootstrap-indicaciones .section-heading img{
+    height: 130px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+.qbootstrap-nav-toggle {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.qbootstrap-nav-toggle.active i::before, .qbootstrap-nav-toggle.active i::after {
+  background: #fff;
+}
+.qbootstrap-nav-toggle:hover, .qbootstrap-nav-toggle:focus, .qbootstrap-nav-toggle:active {
+  outline: none;
+  border-bottom: none !important;
+}
+.qbootstrap-nav-toggle i {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 25px;
+  height: 3px;
+  color: #fff;
+  font: bold 14px/.4 Helvetica;
+  text-transform: uppercase;
+  text-indent: -55px;
+  background: #fff;
+  transition: all .2s ease-out;
+}
+.qbootstrap-nav-toggle i::before, .qbootstrap-nav-toggle i::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.qbootstrap-nav-toggle i::before {
+  top: -7px;
+}
+
+.qbootstrap-nav-toggle i::after {
+  bottom: -7px;
+}
+
+.qbootstrap-nav-toggle:hover i::before {
+  top: -10px;
+}
+
+.qbootstrap-nav-toggle:hover i::after {
+  bottom: -10px;
+}
+
+.qbootstrap-nav-toggle.active i {
+  background: transparent;
+}
+
+.qbootstrap-nav-toggle.active i::before {
+  top: 0;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.qbootstrap-nav-toggle.active i::after {
+  bottom: 0;
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.qbootstrap-nav-toggle {
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  z-index: 21;
+  padding: 6px 0 0 0;
+  display: block;
+  margin: 0 auto;
+  display: none;
+  height: 44px;
+  width: 44px;
+  border-bottom: none !important;
+}
+@media screen and (max-width: 768px) {
+  .qbootstrap-nav-toggle {
+    display: block;
+  }
+}
+
+
+
+
+#footer {
+  padding: 50px 0;
+  color: #7f7f7f;
+}
+#footer .copyright {
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+
+
+.js .to-animate,
+.js .to-animate-2,
+.js .single-animate {
+  opacity: 0;
+}
+
+.js .animate-box {
+  opacity: 0;
+}
+
+.qbootstrap-animated {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
